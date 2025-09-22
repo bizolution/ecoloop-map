@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2e658928804cf6080b4350365c3cd345 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2e658928804cf6080b4350365c3cd345" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2e658928804cf6080b4350365c3cd345 = L.map(
+                "map_2e658928804cf6080b4350365c3cd345",
+                {
+                    center: [-7.54, 112.38],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_2e658928804cf6080b4350365c3cd345);
+
+            
+
+        
+    
+            var tile_layer_7674e094daf18abb33d4d75855f2608a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2e658928804cf6080b4350365c3cd345);
+        
+    
+            var marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4 = L.markerClusterGroup(
+                {}
+            );
+            map_2e658928804cf6080b4350365c3cd345.addLayer(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+            var marker_d9bd2a55b819755c109f69060d21a592 = L.marker(
+                [-7.53, 112.43],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_8d111a53e148083e9dd3a9347b082c67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68415fa953a4b7f138ff9eb4edea7bd0 = $(`<div id="html_68415fa953a4b7f138ff9eb4edea7bd0" style="width: 100.0%; height: 100.0%;"><b>UD Melintu</b><br>Besok/Klinterejo, Sooko, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_8d111a53e148083e9dd3a9347b082c67.setContent(html_68415fa953a4b7f138ff9eb4edea7bd0);
+        
+
+        marker_d9bd2a55b819755c109f69060d21a592.bindPopup(popup_8d111a53e148083e9dd3a9347b082c67)
+        ;
+
+        
+    
+    
+            marker_d9bd2a55b819755c109f69060d21a592.bindTooltip(
+                `<div>
+                     UD Melintu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3e674f7c04cfcb7ec5d49abc78df2797 = L.marker(
+                [-7.554, 112.396],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_63346638072acd2468f1a1c9e7f21664 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba6aa57c2b63ba019a0564101311cc0e = $(`<div id="html_ba6aa57c2b63ba019a0564101311cc0e" style="width: 100.0%; height: 100.0%;"><b>CV Mutiara Plastik</b><br>Muteran, Kejagan, Trowulan, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_63346638072acd2468f1a1c9e7f21664.setContent(html_ba6aa57c2b63ba019a0564101311cc0e);
+        
+
+        marker_3e674f7c04cfcb7ec5d49abc78df2797.bindPopup(popup_63346638072acd2468f1a1c9e7f21664)
+        ;
+
+        
+    
+    
+            marker_3e674f7c04cfcb7ec5d49abc78df2797.bindTooltip(
+                `<div>
+                     CV Mutiara Plastik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11de645f92afb7e6d88c7251326953eb = L.marker(
+                [-7.595, 112.365],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_7a0cd3e6e964cf15511a1ea735dc23ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_985b569daa696e1050af13a0ac09649c = $(`<div id="html_985b569daa696e1050af13a0ac09649c" style="width: 100.0%; height: 100.0%;"><b>Haris</b><br>Bedongrangkang, Tanggalrejo, Mojoagung, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_7a0cd3e6e964cf15511a1ea735dc23ca.setContent(html_985b569daa696e1050af13a0ac09649c);
+        
+
+        marker_11de645f92afb7e6d88c7251326953eb.bindPopup(popup_7a0cd3e6e964cf15511a1ea735dc23ca)
+        ;
+
+        
+    
+    
+            marker_11de645f92afb7e6d88c7251326953eb.bindTooltip(
+                `<div>
+                     Haris
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7801e9c3899c048582dc9fbd0d7f289 = L.marker(
+                [-7.595, 112.365],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_714fe7a4e173ad4bb5be3de34ba8c090 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e80561805fcc25eca47b33b3879c401b = $(`<div id="html_e80561805fcc25eca47b33b3879c401b" style="width: 100.0%; height: 100.0%;"><b>Dowi</b><br>Bedongrangkang, Tanggalrejo, Mojoagung, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_714fe7a4e173ad4bb5be3de34ba8c090.setContent(html_e80561805fcc25eca47b33b3879c401b);
+        
+
+        marker_f7801e9c3899c048582dc9fbd0d7f289.bindPopup(popup_714fe7a4e173ad4bb5be3de34ba8c090)
+        ;
+
+        
+    
+    
+            marker_f7801e9c3899c048582dc9fbd0d7f289.bindTooltip(
+                `<div>
+                     Dowi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4091d273ad2840cac271e348992fcdc0 = L.marker(
+                [-7.595, 112.365],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_414cc02337daf3c76ee527ccd103ec2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31c5371faac116417005acad8fa18515 = $(`<div id="html_31c5371faac116417005acad8fa18515" style="width: 100.0%; height: 100.0%;"><b>Jumadi</b><br>Bedongrangkang, Tanggalrejo, Mojoagung, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_414cc02337daf3c76ee527ccd103ec2d.setContent(html_31c5371faac116417005acad8fa18515);
+        
+
+        marker_4091d273ad2840cac271e348992fcdc0.bindPopup(popup_414cc02337daf3c76ee527ccd103ec2d)
+        ;
+
+        
+    
+    
+            marker_4091d273ad2840cac271e348992fcdc0.bindTooltip(
+                `<div>
+                     Jumadi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec2758934c51b565711e7810ea404b1f = L.marker(
+                [-7.595, 112.365],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_fad037216410274d1186107beea6d1bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad3471d926cc9780f60012cb9e3a8cee = $(`<div id="html_ad3471d926cc9780f60012cb9e3a8cee" style="width: 100.0%; height: 100.0%;"><b>CV Diva Jaya Plastik</b><br>Bedongrangkang, Tanggalrejo, Mojoagung, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_fad037216410274d1186107beea6d1bd.setContent(html_ad3471d926cc9780f60012cb9e3a8cee);
+        
+
+        marker_ec2758934c51b565711e7810ea404b1f.bindPopup(popup_fad037216410274d1186107beea6d1bd)
+        ;
+
+        
+    
+    
+            marker_ec2758934c51b565711e7810ea404b1f.bindTooltip(
+                `<div>
+                     CV Diva Jaya Plastik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_52cb97f7602a2db454da47e894222092 = L.marker(
+                [-7.53, 112.323],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_e76972604b5412d032e03d79de91f9ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0fa944e9a05fbedd10ea8767585e2d9d = $(`<div id="html_0fa944e9a05fbedd10ea8767585e2d9d" style="width: 100.0%; height: 100.0%;"><b>Nanang</b><br>Sawah, Budugsidorejo, Sumobito, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_e76972604b5412d032e03d79de91f9ec.setContent(html_0fa944e9a05fbedd10ea8767585e2d9d);
+        
+
+        marker_52cb97f7602a2db454da47e894222092.bindPopup(popup_e76972604b5412d032e03d79de91f9ec)
+        ;
+
+        
+    
+    
+            marker_52cb97f7602a2db454da47e894222092.bindTooltip(
+                `<div>
+                     Nanang
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7cfd32c2695e51321ca503ae8ef9442 = L.marker(
+                [-7.53, 112.323],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_2f7cc41e4f109aef48aa9951f2965c59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b95c41bbc14b0a75e6003d42b0bfded7 = $(`<div id="html_b95c41bbc14b0a75e6003d42b0bfded7" style="width: 100.0%; height: 100.0%;"><b>Soleh</b><br>Sawah, Budugsidorejo, Sumobito, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_2f7cc41e4f109aef48aa9951f2965c59.setContent(html_b95c41bbc14b0a75e6003d42b0bfded7);
+        
+
+        marker_e7cfd32c2695e51321ca503ae8ef9442.bindPopup(popup_2f7cc41e4f109aef48aa9951f2965c59)
+        ;
+
+        
+    
+    
+            marker_e7cfd32c2695e51321ca503ae8ef9442.bindTooltip(
+                `<div>
+                     Soleh
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6f316ce8c7e7e0b3ef5488f1d459871 = L.marker(
+                [-7.554, 112.396],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_519be9a3ecbe801d155f680be8a6b194 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16e4be9d96b1a4be50a5a267e441a1d4 = $(`<div id="html_16e4be9d96b1a4be50a5a267e441a1d4" style="width: 100.0%; height: 100.0%;"><b>Sulkan</b><br>Muteran, Kejagan, Trowulan, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_519be9a3ecbe801d155f680be8a6b194.setContent(html_16e4be9d96b1a4be50a5a267e441a1d4);
+        
+
+        marker_c6f316ce8c7e7e0b3ef5488f1d459871.bindPopup(popup_519be9a3ecbe801d155f680be8a6b194)
+        ;
+
+        
+    
+    
+            marker_c6f316ce8c7e7e0b3ef5488f1d459871.bindTooltip(
+                `<div>
+                     Sulkan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e8f4b049c31d5bbea88619ca5c4e0c1 = L.marker(
+                [-7.487, 112.403],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_f857e23d293effd592e213c81e2bb166 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3dde1739fb68adcac8334c4dc0067795 = $(`<div id="html_3dde1739fb68adcac8334c4dc0067795" style="width: 100.0%; height: 100.0%;"><b>Yono</b><br>Brongkol, Banjaragung, Puri, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_f857e23d293effd592e213c81e2bb166.setContent(html_3dde1739fb68adcac8334c4dc0067795);
+        
+
+        marker_4e8f4b049c31d5bbea88619ca5c4e0c1.bindPopup(popup_f857e23d293effd592e213c81e2bb166)
+        ;
+
+        
+    
+    
+            marker_4e8f4b049c31d5bbea88619ca5c4e0c1.bindTooltip(
+                `<div>
+                     Yono
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ea45c03587d926ba516f093c0776914 = L.marker(
+                [-7.487, 112.403],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_5b094b86f457889289c50190a4004e27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96731565f5a5ea051617aca1e10f5ae3 = $(`<div id="html_96731565f5a5ea051617aca1e10f5ae3" style="width: 100.0%; height: 100.0%;"><b>Rojik</b><br>Brongkol, Banjaragung, Puri, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_5b094b86f457889289c50190a4004e27.setContent(html_96731565f5a5ea051617aca1e10f5ae3);
+        
+
+        marker_0ea45c03587d926ba516f093c0776914.bindPopup(popup_5b094b86f457889289c50190a4004e27)
+        ;
+
+        
+    
+    
+            marker_0ea45c03587d926ba516f093c0776914.bindTooltip(
+                `<div>
+                     Rojik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fecb9564c6f8e3d9b90f5bebb54d411 = L.marker(
+                [-7.487, 112.403],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_46a75701c3bad1b1de81b52a9117872f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f7ef73166cfa6a1937ac6ff6c8cf51e = $(`<div id="html_1f7ef73166cfa6a1937ac6ff6c8cf51e" style="width: 100.0%; height: 100.0%;"><b>Dedik</b><br>Brongkol, Banjaragung, Puri, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_46a75701c3bad1b1de81b52a9117872f.setContent(html_1f7ef73166cfa6a1937ac6ff6c8cf51e);
+        
+
+        marker_2fecb9564c6f8e3d9b90f5bebb54d411.bindPopup(popup_46a75701c3bad1b1de81b52a9117872f)
+        ;
+
+        
+    
+    
+            marker_2fecb9564c6f8e3d9b90f5bebb54d411.bindTooltip(
+                `<div>
+                     Dedik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_780aa23fc82c584f65643dd0f7cbe5e8 = L.marker(
+                [-7.474, 112.441],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_8d5d403ac0e191bef44d314146e531f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_122463aa3303dad63a4b0c518643be20 = $(`<div id="html_122463aa3303dad63a4b0c518643be20" style="width: 100.0%; height: 100.0%;"><b>Rohman Jaya Plastik</b><br>Jl. Raya Jetis No.46, Wonorejo, Jetis, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_8d5d403ac0e191bef44d314146e531f1.setContent(html_122463aa3303dad63a4b0c518643be20);
+        
+
+        marker_780aa23fc82c584f65643dd0f7cbe5e8.bindPopup(popup_8d5d403ac0e191bef44d314146e531f1)
+        ;
+
+        
+    
+    
+            marker_780aa23fc82c584f65643dd0f7cbe5e8.bindTooltip(
+                `<div>
+                     Rohman Jaya Plastik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64f8577e4cc58e78d6177eaf1126d53d = L.marker(
+                [-7.607, 112.225],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_8cd22e1ea152c7fb337ef291780d4983 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac7aa2bf5f0b30c36ff1d052fe56ae05 = $(`<div id="html_ac7aa2bf5f0b30c36ff1d052fe56ae05" style="width: 100.0%; height: 100.0%;"><b>ESAJ</b><br>Gudang Pojok Rejo, Kesamben, Jombang<br><i>(approximate)</i></div>`)[0];
+            popup_8cd22e1ea152c7fb337ef291780d4983.setContent(html_ac7aa2bf5f0b30c36ff1d052fe56ae05);
+        
+
+        marker_64f8577e4cc58e78d6177eaf1126d53d.bindPopup(popup_8cd22e1ea152c7fb337ef291780d4983)
+        ;
+
+        
+    
+    
+            marker_64f8577e4cc58e78d6177eaf1126d53d.bindTooltip(
+                `<div>
+                     ESAJ
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_040f9d0a74b3d9a6a280e236cc4d400e = L.marker(
+                [-7.445, 112.392],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_08adb105f0a13358e04a092d0106b3cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fb1333aba41be91c70e190afb11db69 = $(`<div id="html_7fb1333aba41be91c70e190afb11db69" style="width: 100.0%; height: 100.0%;"><b>Bumdes</b><br>Kangkungan, Kemantren, Gedeg, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_08adb105f0a13358e04a092d0106b3cf.setContent(html_7fb1333aba41be91c70e190afb11db69);
+        
+
+        marker_040f9d0a74b3d9a6a280e236cc4d400e.bindPopup(popup_08adb105f0a13358e04a092d0106b3cf)
+        ;
+
+        
+    
+    
+            marker_040f9d0a74b3d9a6a280e236cc4d400e.bindTooltip(
+                `<div>
+                     Bumdes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17d31cbd5ea8b4128f959ead60fc0b68 = L.marker(
+                [-7.445, 112.392],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_34d2cbe257804c1c7345c9162a3b6589 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44033265db21d8ec05b87185b471abe9 = $(`<div id="html_44033265db21d8ec05b87185b471abe9" style="width: 100.0%; height: 100.0%;"><b>Antoni</b><br>Kangkungan, Kemantren, Gedeg, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_34d2cbe257804c1c7345c9162a3b6589.setContent(html_44033265db21d8ec05b87185b471abe9);
+        
+
+        marker_17d31cbd5ea8b4128f959ead60fc0b68.bindPopup(popup_34d2cbe257804c1c7345c9162a3b6589)
+        ;
+
+        
+    
+    
+            marker_17d31cbd5ea8b4128f959ead60fc0b68.bindTooltip(
+                `<div>
+                     Antoni
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0df621c0f4dee9b465a3dbc018547d06 = L.marker(
+                [-7.445, 112.392],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_0c8b26f7f6874e7156dcc5ad60a6be3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18135f409e8da074cb0ed476f6c60cf0 = $(`<div id="html_18135f409e8da074cb0ed476f6c60cf0" style="width: 100.0%; height: 100.0%;"><b>Haji Gandung</b><br>Kangkungan, Kemantren, Gedeg, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_0c8b26f7f6874e7156dcc5ad60a6be3a.setContent(html_18135f409e8da074cb0ed476f6c60cf0);
+        
+
+        marker_0df621c0f4dee9b465a3dbc018547d06.bindPopup(popup_0c8b26f7f6874e7156dcc5ad60a6be3a)
+        ;
+
+        
+    
+    
+            marker_0df621c0f4dee9b465a3dbc018547d06.bindTooltip(
+                `<div>
+                     Haji Gandung
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_46cb7249e9c1ffa5af491f9db77d12c7 = L.marker(
+                [-7.445, 112.392],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_1316eaedb7a65291fb08601116ac565d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_766015148e3d4292c78ffe67607a5b90 = $(`<div id="html_766015148e3d4292c78ffe67607a5b90" style="width: 100.0%; height: 100.0%;"><b>Rukun Sedulur</b><br>Kangkungan, Kemantren, Gedeg, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_1316eaedb7a65291fb08601116ac565d.setContent(html_766015148e3d4292c78ffe67607a5b90);
+        
+
+        marker_46cb7249e9c1ffa5af491f9db77d12c7.bindPopup(popup_1316eaedb7a65291fb08601116ac565d)
+        ;
+
+        
+    
+    
+            marker_46cb7249e9c1ffa5af491f9db77d12c7.bindTooltip(
+                `<div>
+                     Rukun Sedulur
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4146457508b8ba4f8685562565ee7273 = L.marker(
+                [-7.445, 112.392],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_71dfcf29a3e6207c3a712eec7a38f578 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6645e1728d71802890c4cb9085e14b72 = $(`<div id="html_6645e1728d71802890c4cb9085e14b72" style="width: 100.0%; height: 100.0%;"><b>PT Sumber Makmur</b><br>Kangkungan, Kemantren, Gedeg, Mojokerto<br><i>(approximate)</i></div>`)[0];
+            popup_71dfcf29a3e6207c3a712eec7a38f578.setContent(html_6645e1728d71802890c4cb9085e14b72);
+        
+
+        marker_4146457508b8ba4f8685562565ee7273.bindPopup(popup_71dfcf29a3e6207c3a712eec7a38f578)
+        ;
+
+        
+    
+    
+            marker_4146457508b8ba4f8685562565ee7273.bindTooltip(
+                `<div>
+                     PT Sumber Makmur
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8780a57a2558f36fdba551fbf10408f0 = L.marker(
+                [-8.648531, 115.255242],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_76bf61973459aac99286e32e7006e726 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa543af13352df22a7dc55277b7b4600 = $(`<div id="html_aa543af13352df22a7dc55277b7b4600" style="width: 100.0%; height: 100.0%;"><b>BALIPET</b><br>Jl. Tirta Lepang II No.16, Kesiman Kertalangu, Denpasar Timur, Denpasar, Bali 80237</div>`)[0];
+            popup_76bf61973459aac99286e32e7006e726.setContent(html_aa543af13352df22a7dc55277b7b4600);
+        
+
+        marker_8780a57a2558f36fdba551fbf10408f0.bindPopup(popup_76bf61973459aac99286e32e7006e726)
+        ;
+
+        
+    
+    
+            marker_8780a57a2558f36fdba551fbf10408f0.bindTooltip(
+                `<div>
+                     BALIPET
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9acf193b169e03233fb3a0cffbb4aee0 = L.marker(
+                [-8.630815, 115.207579],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_852a0c1cf1f1415dc6a2943cf5789826 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_030a8bc7218294e13515eccd96c7fce0 = $(`<div id="html_030a8bc7218294e13515eccd96c7fce0" style="width: 100.0%; height: 100.0%;"><b>Jaya Abadi Plastik</b><br>Jl. Angsoka Cargo Permai, Banjar Batur, Ubung, Denpasar Utara, Denpasar, Bali 80116</div>`)[0];
+            popup_852a0c1cf1f1415dc6a2943cf5789826.setContent(html_030a8bc7218294e13515eccd96c7fce0);
+        
+
+        marker_9acf193b169e03233fb3a0cffbb4aee0.bindPopup(popup_852a0c1cf1f1415dc6a2943cf5789826)
+        ;
+
+        
+    
+    
+            marker_9acf193b169e03233fb3a0cffbb4aee0.bindTooltip(
+                `<div>
+                     Jaya Abadi Plastik
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4fe6429906aa2fb615a3c9730eb3fce2 = L.marker(
+                [-8.115269, 115.091163],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_6bd2651b990c953dc9739f81392044d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_884ffea68f1ee4244a0d437f21a340bd = $(`<div id="html_884ffea68f1ee4244a0d437f21a340bd" style="width: 100.0%; height: 100.0%;"><b>Sepakat Singaraja (Sepakat Ecoloop)</b><br>Jl. WR Supratman No.133, Penarukan, Buleleng, Bali 81119</div>`)[0];
+            popup_6bd2651b990c953dc9739f81392044d9.setContent(html_884ffea68f1ee4244a0d437f21a340bd);
+        
+
+        marker_4fe6429906aa2fb615a3c9730eb3fce2.bindPopup(popup_6bd2651b990c953dc9739f81392044d9)
+        ;
+
+        
+    
+    
+            marker_4fe6429906aa2fb615a3c9730eb3fce2.bindTooltip(
+                `<div>
+                     Sepakat Singaraja (Sepakat Ecoloop)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9ac123ae83ee26ea850ee23984eb1add = L.marker(
+                [-8.707, 115.19],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_405f7b2608930a3b738bc9d5e81a2dbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73e5433308d43df234796cfcb6555723 = $(`<div id="html_73e5433308d43df234796cfcb6555723" style="width: 100.0%; height: 100.0%;"><b>Agus Jaya Kardus</b><br>Pemogan, Denpasar, Bali<br><i>(approximate)</i></div>`)[0];
+            popup_405f7b2608930a3b738bc9d5e81a2dbb.setContent(html_73e5433308d43df234796cfcb6555723);
+        
+
+        marker_9ac123ae83ee26ea850ee23984eb1add.bindPopup(popup_405f7b2608930a3b738bc9d5e81a2dbb)
+        ;
+
+        
+    
+    
+            marker_9ac123ae83ee26ea850ee23984eb1add.bindTooltip(
+                `<div>
+                     Agus Jaya Kardus
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f01887799a34b7fd2e4f15a1f9a63c4a = L.marker(
+                [-8.115, 115.094],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_bd0b6e35272c20e43efdc18374e302a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de54eb2a69b93af88cd2d13f058e623c = $(`<div id="html_de54eb2a69b93af88cd2d13f058e623c" style="width: 100.0%; height: 100.0%;"><b>Singaraja (General)</b><br>Singaraja, Buleleng, Bali<br><i>(approximate)</i></div>`)[0];
+            popup_bd0b6e35272c20e43efdc18374e302a7.setContent(html_de54eb2a69b93af88cd2d13f058e623c);
+        
+
+        marker_f01887799a34b7fd2e4f15a1f9a63c4a.bindPopup(popup_bd0b6e35272c20e43efdc18374e302a7)
+        ;
+
+        
+    
+    
+            marker_f01887799a34b7fd2e4f15a1f9a63c4a.bindTooltip(
+                `<div>
+                     Singaraja (General)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0814fcf1dac8d9296d17057c2ccdd671 = L.marker(
+                [-8.356, 114.65],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_76cdf5fed26ffb644f12aab0ae9c00f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ad4fde4ba6abfa1feca5464a245a092 = $(`<div id="html_8ad4fde4ba6abfa1feca5464a245a092" style="width: 100.0%; height: 100.0%;"><b>Negara (Jembrana)</b><br>Negara, Jembrana, Bali<br><i>(approximate)</i></div>`)[0];
+            popup_76cdf5fed26ffb644f12aab0ae9c00f5.setContent(html_8ad4fde4ba6abfa1feca5464a245a092);
+        
+
+        marker_0814fcf1dac8d9296d17057c2ccdd671.bindPopup(popup_76cdf5fed26ffb644f12aab0ae9c00f5)
+        ;
+
+        
+    
+    
+            marker_0814fcf1dac8d9296d17057c2ccdd671.bindTooltip(
+                `<div>
+                     Negara (Jembrana)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a5aae4b948567f3f0a11bfedee5d46d = L.marker(
+                [-8.583, 116.1],
+                {}
+            ).addTo(marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4);
+        
+    
+        var popup_3b7ae5444fc9e0c5cb73e893dcf9f5e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_203d089abfb36bb39615a541690ca712 = $(`<div id="html_203d089abfb36bb39615a541690ca712" style="width: 100.0%; height: 100.0%;"><b>Lombok (General)</b><br>Mataram, Lombok<br><i>(approximate)</i></div>`)[0];
+            popup_3b7ae5444fc9e0c5cb73e893dcf9f5e6.setContent(html_203d089abfb36bb39615a541690ca712);
+        
+
+        marker_0a5aae4b948567f3f0a11bfedee5d46d.bindPopup(popup_3b7ae5444fc9e0c5cb73e893dcf9f5e6)
+        ;
+
+        
+    
+    
+            marker_0a5aae4b948567f3f0a11bfedee5d46d.bindTooltip(
+                `<div>
+                     Lombok (General)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_414a2698ea7062faedc4a88ed2268719 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_7674e094daf18abb33d4d75855f2608a,
+                },
+                overlays :  {
+                    "Ecoloop Collection Hubs" : marker_cluster_cee576ad4188c03cb6b8033b7a5a6dd4,
+                },
+            };
+            L.control.layers(
+                layer_control_414a2698ea7062faedc4a88ed2268719.base_layers,
+                layer_control_414a2698ea7062faedc4a88ed2268719.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_2e658928804cf6080b4350365c3cd345);
+        
+</script>
+</html>
