@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ecoloop Hubs Map</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+  <style>
+    html, body { height:100%; margin:0; }
+    #map { width:100%; height:100vh; }
+    .leaflet-container { font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    .legend {
+      position: absolute; bottom: 12px; right: 12px; z-index: 1000;
+      background: #fff; padding: 10px 12px; border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    }
+    .legend h4 { margin: 0 0 6px; font-size: 14px; }
+    .legend .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; background:#2ecc71; }
+    .legend small { color:#666; display:block; margin-top:4px; }
+  </style>
+</head>
+<body>
+  <div id="map" role="region" aria-label="Ecoloop Hubs Map"></div>
+  <div class="legend">
+    <h4>Ecoloop Collection Hubs</h4>
+    <div><span class="dot" aria-hidden="true"></span>Hub Location</div>
+    <small>Some pins are approximate.</small>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+  <script>
+    // Marker data: [name, address, lat, lon, approximate]
+    const MARKERS = [
+      ["UD Melintu","Besok/Klinterejo, Sooko, Mojokerto",-7.53,112.43,true],
+      ["CV Mutiara Plastik","Muteran, Kejagan, Trowulan, Mojokerto",-7.554,112.396,true],
+      ["Haris","Bedongrangkang, Tanggalrejo, Mojoagung, Jombang",-7.595,112.365,true],
+      ["Dowi","Bedongrangkang, Tanggalrejo, Mojoagung, Jombang",-7.595,112.365,true],
+      ["Jumadi","Bedongrangkang, Tanggalrejo, Mojoagung, Jombang",-7.595,112.365,true],
+      ["CV Diva Jaya Plastik","Bedongrangkang, Tanggalrejo, Mojoagung, Jombang",-7.595,112.365,true],
+      ["Nanang","Sawah, Budugsidorejo, Sumobito, Jombang",-7.53,112.323,true],
+      ["Soleh","Sawah, Budugsidorejo, Sumobito, Jombang",-7.53,112.323,true],
+      ["Sulkan","Muteran, Kejagan, Trowulan, Mojokerto",-7.554,112.396,true],
+      ["Yono","Brongkol, Banjaragung, Puri, Mojokerto",-7.487,112.403,true],
+      ["Rojik","Brongkol, Banjaragung, Puri, Mojokerto",-7.487,112.403,true],
+      ["Dedik","Brongkol, Banjaragung, Puri, Mojokerto",-7.487,112.403,true],
+      ["Rohman Jaya Plastik","Jl. Raya Jetis No.46, Wonorejo, Jetis, Mojokerto",-7.474,112.441,true],
+      ["ESAJ","Gudang Pojok Rejo, Kesamben, Jombang",-7.607,112.225,true],
+      ["Bumdes","Kangkungan, Kemantren, Gedeg, Mojokerto",-7.445,112.392,true],
+      ["Antoni","Kangkungan, Kemantren, Gedeg, Mojokerto",-7.445,112.392,true],
+      ["Haji Gandung","Kangkungan, Kemantren, Gedeg, Mojokerto",-7.445,112.392,true],
+      ["Rukun Sedulur","Kangkungan, Kemantren, Gedeg, Mojokerto",-7.445,112.392,true],
+      ["PT Sumber Makmur","Kangkungan, Kemantren, Gedeg, Mojokerto",-7.445,112.392,true],
+      ["BALIPET","Jl. Tirta Lepang II No.16, Kesiman Kertalangu, Denpasar",-8.648531,115.255242,false],
+      ["Jaya Abadi Plastik","Jl. Angsoka Cargo Permai, Ubung, Denpasar",-8.630815,115.207579,false],
+      ["Sepakat Singaraja (Sepakat Ecoloop)","Jl. WR Supratman 133, Penarukan, Buleleng",-8.115269,115.091163,false],
+      ["Agus Jaya Kardus","Pemogan, Denpasar",-8.707,115.19,true],
+      ["Singaraja (General)","Singaraja, Buleleng",-8.115,115.094,true],
+      ["Negara (Jembrana)","Negara, Jembrana",-8.356,114.65,true],
+      ["Lombok (General)","Mataram, Lombok",-8.583,116.1,true]
+    ];
+
+    // Initialize map
+    const map = L.map('map', { scrollWheelZoom: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add markers and fit bounds
+    const group = L.featureGroup().addTo(map);
+    MARKERS.forEach(([name, addr, lat, lon, approx]) => {
+      const note = approx ? "<br><i>(approximate)</i>" : "";
+      L.marker([lat, lon])
+        .bindPopup(`<b>${name}</b><br>${addr}${note}`)
+        .addTo(group);
+    });
+    map.fitBounds(group.getBounds(), { padding: [28, 28] });
+
+    // Resize observer to keep map responsive in Canva if container changes
+    new ResizeObserver(() => { map.invalidateSize(); }).observe(document.body);
+  </script>
+</body>
+</html>
